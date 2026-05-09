@@ -1,0 +1,63 @@
+{
+  "info": {
+    "name": "Expense Tracker Backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth Signup",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "{{baseUrl}}/api/auth/signup", "host": ["{{baseUrl}}"], "path": ["api", "auth", "signup"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\":\"deepu\",\"password\":\"secret123\",\"email\":\"deepu@gmail.com\",\"currency\":\"INR\"}"
+        }
+      }
+    },
+    {
+      "name": "Auth Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "{{baseUrl}}/api/auth/login", "host": ["{{baseUrl}}"], "path": ["api", "auth", "login"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\":\"deepu\",\"password\":\"secret123\"}"
+        }
+      }
+    },
+    {
+      "name": "Add Transaction",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{token}}" }
+        ],
+        "url": { "raw": "{{baseUrl}}/api/transactions/add", "host": ["{{baseUrl}}"], "path": ["api", "transactions", "add"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"amount\":500,\"type\":\"DEBIT\",\"category\":\"Food\",\"note\":\"Lunch\",\"paymentMode\":\"UPI\",\"source\":\"MANUAL\"}"
+        }
+      }
+    },
+    {
+      "name": "Telegram Webhook",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": { "raw": "{{baseUrl}}/api/telegram/webhook", "host": ["{{baseUrl}}"], "path": ["api", "telegram", "webhook"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\":\"deepu\",\"message\":\"Spent 500 on food\"}"
+        }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:8080" },
+    { "key": "token", "value": "" }
+  ]
+}
