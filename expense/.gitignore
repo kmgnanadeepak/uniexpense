@@ -1,3 +1,37 @@
-node_modules
-dist
+# ------------------------------
+# OS / editor files
+# ------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------
+# Logs
+# ------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------
+# Frontend / Node
+# ------------------------------
+node_modules/
+dist/
+build/
+.parcel-cache/
+.vite/
+.cache/
+coverage/
+
+# Environment files
 .env
+.env.*
+!.env.example
+
+# TypeScript
+*.tsbuildinfo

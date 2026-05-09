@@ -1,0 +1,35 @@
+# ------------------------------
+# Spring Boot / Maven
+# ------------------------------
+target/
+out/
+build/
+
+# Maven wrapper cache (optional)
+.mvn/wrapper/maven-wrapper.jar
+
+# ------------------------------
+# Runtime files
+# ------------------------------
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------
+# Environment / local config
+# ------------------------------
+.env
+.env.*
+!.env.example
+application-local.properties
+application-*.local.properties
+
+# ------------------------------
+# IDE / OS
+# ------------------------------
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
